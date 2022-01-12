@@ -26,7 +26,7 @@ def resource_path(relative_path: str) -> str:
 def site_login():
      driver.get("https://vsn.ac.in/student.vsn.ac.in/")  #Connect to School Website
      driver.find_element(By.ID,"txtStudentID").send_keys("H1079") #Enter School ID
-     driver.find_element(By.ID,"txtPass").send_keys("31122003") #Enter Password
+     driver.find_element(By.ID,"txtPass").send_keys("") #Enter Password
      driver.find_element(By.ID,"btnSubmit").click() #Click On Submit
      element=WebDriverWait(driver,50).until( #Wait untill portal loads or its a time out.
            lambda driver: driver.find_elements(By.LINK_TEXT,"Attendance Time UP") or driver.find_elements(By.LINK_TEXT,"Attendance") or driver.find_elements(By.LINK_TEXT,"Attendance Done") or driver.find_elements(By.LINK_TEXT,"Holiday")
