@@ -28,8 +28,7 @@ def site_login():
      driver.find_element(By.ID,"txtStudentID").send_keys("H1079") #Enter School ID
      driver.find_element(By.ID,"txtPass").send_keys("31122003") #Enter Password
      driver.find_element(By.ID,"btnSubmit").click() #Click On Submit
-     #driver.find_element_by_link_text("Live Class").click()
-     element=WebDriverWait(driver,50).until(
+     element=WebDriverWait(driver,50).until( #Wait untill portal loads or its a time out.
            lambda driver: driver.find_elements(By.LINK_TEXT,"Attendance Time UP") or driver.find_elements(By.LINK_TEXT,"Attendance") or driver.find_elements(By.LINK_TEXT,"Attendance Done") or driver.find_elements(By.LINK_TEXT,"Holiday")
          )
      print(element)
